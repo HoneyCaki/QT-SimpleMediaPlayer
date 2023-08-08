@@ -1,2 +1,2 @@
 # QT-SimpleMediaPlayer
-This is a simple media player, it is my practice project and has some bugs.
+随便用qt做的简单播放器，有很多bug
