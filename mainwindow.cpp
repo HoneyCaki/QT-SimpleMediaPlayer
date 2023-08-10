@@ -28,10 +28,10 @@ MainWindow::MainWindow(QWidget *parent)
     //音量条拖动处理
     connect(ui->volumeBar, &QSlider::sliderMoved, player, [&]()
     {
-        if(ui->volumeBar->value() == 1 || ui->volumeBar->value() == 2 || ui->volumeBar->value() == 4)
+        //BUG↓
+        if(ui->volumeBar->value() == 1)
             ui->volumeBar->setValue(0);
-        else if(ui->volumeBar->value() == 99 || ui->volumeBar->value() == 98 || ui->volumeBar->value() == 96)
-            ui->volumeBar->setValue(100);
+
         volume = ui->volumeBar->value();
         audioOut->setVolume((float)volume / 100.0f);
         ui->volumePercentText->setText(QString("%1%").arg(volume));
