@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,0,0">
     <item>
-     <widget class="QVideoWidget" name="videoWiget" native="true">
+     <widget class="QVideoWidget" name="videoWidget" native="true">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(0, 0, 0);</string>
       </property>
@@ -47,7 +47,7 @@
       <item>
        <widget class="QLabel" name="timeText">
         <property name="styleSheet">
-         <string notr="true">font: 290 12pt &quot;Microsoft YaHei&quot;;</string>
+         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
          <string>0:0:0 / 0:0:0</string>
@@ -70,11 +70,11 @@
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1,0,2,2">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1,0,0,2,2,0">
       <item>
        <widget class="QLabel" name="label">
         <property name="styleSheet">
-         <string notr="true">font: 290 12pt &quot;Microsoft YaHei&quot;;</string>
+         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
          <string>音量:</string>
@@ -91,7 +91,7 @@
       <item>
        <widget class="QLabel" name="volumePercentText">
         <property name="styleSheet">
-         <string notr="true">font: 290 12pt &quot;Microsoft YaHei&quot;;</string>
+         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
          <string>0%</string>
@@ -99,9 +99,46 @@
        </widget>
       </item>
       <item>
+       <widget class="QComboBox" name="speedComboBox">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string notr="true">1.00x</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">1.25x</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">1.50x</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">2.00x</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">3.00x</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string notr="true">4.00x</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="openBtn">
         <property name="styleSheet">
-         <string notr="true">font: 290 12pt &quot;Microsoft YaHei&quot;;</string>
+         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
          <string>打开...</string>
@@ -111,10 +148,20 @@
       <item>
        <widget class="QPushButton" name="startAndPauseBtn">
         <property name="styleSheet">
-         <string notr="true">font: 290 12pt &quot;Microsoft YaHei&quot;;</string>
+         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
          <string>播放</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="fullScrBtn">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+        </property>
+        <property name="text">
+         <string>全屏</string>
         </property>
        </widget>
       </item>

@@ -9,6 +9,8 @@
 #include <QTime>
 #include <QAudioOutput>
 #include <QThread>
+#include <QKeyEvent>
+#include <QEvent>
 
 #include <stdlib.h>
 
@@ -31,9 +33,11 @@ public:
     QString format_time(int ms);
     QString get_process_text(QString inTotalDuration, QString inCurrent = "0:0:0");
     int     get_process_percent(qint64 inValue, qint64 inTotal);
-
-//private:
+    void setPlayerStatus(bool playStatus);
+    void init_player();
+private:
     Ui::MainWindow *ui;
+    bool eventFilter(QObject *obj, QEvent *e) override;
 };
 
 class ProcessBarThread : public QThread
